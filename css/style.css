@@ -38,7 +38,7 @@ nav {
 .nav-top img {
     height: 50px;
     width: 50px;
-    object-fit: contain;
+    border-radius: 50%; 
 }
 
 .nav-top span {
@@ -346,4 +346,134 @@ footer {
     text-align: center;
     font-size: 14px;
     color: var(--cream);
+}
+
+/* Have the logo centered in the about section */
+.center-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px; 
+}
+
+
+/* ── subhero About Section ── */
+#subhero {
+    background-color: var(--navy);
+    padding: 40px;
+    text-align: center;
+}
+
+.subhero-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#subhero h1 {
+    color: var(--white);
+    font-size: 48px;
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+#subhero p {
+    color: var(--cream);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* photo collage*/
+
+.collage {
+  max-width: 800px;
+  margin-inline: auto;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+
+  grid-template-areas:
+    "..   two two    two    three  four ..    .."
+    "one  two two    two    five   five six   .."
+    "..   two two    two    five   five seven eight"
+    "nine ten eleven eleven twelve ..   ..    .."
+    "..   ..  eleven eleven ..     ..   ..    ..";
+}
+
+.collage > div {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.collage img {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.collage img:hover {
+  scale: 1.15;
+  rotate: 3deg;
+}
+
+.collage :nth-child(1) {
+  grid-area: one;
+}
+
+.collage :nth-child(2) {
+  grid-area: two;
+}
+
+.collage :nth-child(3) {
+  grid-area: three;
+}
+
+.collage :nth-child(4) {
+  grid-area: four;
+  background-color: #ffecc3;
+  border-bottom-right-radius: 100%;
+}
+
+.collage :nth-child(5) {
+  grid-area: five;
+}
+
+.collage :nth-child(6) {
+  grid-area: six;
+  background-color: #ccf0ee;
+  border-top-right-radius: 100%;
+}
+
+.collage :nth-child(7) {
+  grid-area: seven;
+}
+
+.collage :nth-child(8) {
+  grid-area: eight;
+  background-color: #cdd7f0;
+  border-radius: 100%;
+}
+
+.collage :nth-child(9) {
+  grid-area: nine;
+  background-color: #ffdce0;
+  border-top-left-radius: 100%;
+}
+
+.collage :nth-child(10) {
+  grid-area: ten;
+}
+
+.collage :nth-child(11) {
+  grid-area: eleven;
+}
+
+.collage :nth-child(12) {
+  grid-area: twelve;
 }

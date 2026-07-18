@@ -1,6 +1,6 @@
 :root {
-    --navy: #0D1B3E;
-    --navy-mid: #2C3E6B;
+    --navy: #1F2E5B;
+    --navy-mid: #385688;
     --gold: #C9A84C;
     --cream: #F5F0E8;
     --white: #FFFFFF;
@@ -82,9 +82,13 @@ body {
 
 /* ── Nav Bar ── */
 nav {
-    background-color: var(--navy);
+    background-color: var(--white);
     padding: 20px 0 0 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .nav-top {
@@ -102,12 +106,12 @@ nav {
 }
 
 .nav-top span {
-    color: var(--white);
+    color: var(--navy);
     font-size: 24px;
 }
 
 .nav-bottom {
-    border-top: 1px solid var(--navy-mid);
+    border-top: 1px solid #e0ddd6;
     padding: 14px 32px;
     display: flex;
     align-items: center;
@@ -122,9 +126,19 @@ nav {
 }
 
 .nav-links a {
-    color: var(--white);
+    color: var(--navy);
     text-decoration: none;
     font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+.nav-links a.active {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 4px;
 }
 
 .nav-donate {
@@ -154,7 +168,7 @@ nav {
 }
 
 #hero h1 {
-    color: var(--white);
+    color: var(--cream);
     font-size: 48px;
     margin-bottom: 24px;
     line-height: 1.3;
@@ -261,6 +275,8 @@ nav {
 .collage > div {
     overflow: hidden;
     border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
 }
 
 .collage img {
@@ -284,6 +300,63 @@ nav {
 .collage :nth-child(10) { grid-area: ten; }
 .collage :nth-child(11) { grid-area: eleven; }
 .collage :nth-child(12) { grid-area: twelve; }
+
+/* ── Collage lightbox ── */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 41, 75, 0.92);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 85vw;
+    max-height: 75vh;
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 36px;
+    color: var(--white);
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover,
+.lightbox-close:hover {
+    color: var(--gold);
+}
 
 /* ── Programs Section (Homepage) ── */
 #programs {
@@ -444,7 +517,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(13, 27, 62, 0.65);
+    background-color: rgba(27, 41, 75, 0.65);
 }
 
 .programs-hero-content {
@@ -482,6 +555,7 @@ footer {
 .program-row img {
     width: 340px;
     min-width: 340px;
+    height: 530px;
     object-fit: cover;
 }
 
@@ -589,7 +663,7 @@ footer {
 
 /* ── Contact Page ── */
 #contact-hero {
-    background-image: url('../images/exampl1.jpg');
+    background-image: url('../images/trial.jpg');
     background-size: cover;
     background-position: center;
     padding: 120px 32px;
@@ -604,7 +678,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(13, 27, 62, 0.65);
+    background-color: rgba(27, 41, 75, 0.65);
 }
 
 #contact-section {

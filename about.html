@@ -9,10 +9,14 @@
 </head>
 <body>
   <nav>
+    <div class="nav-top">
+      <img src="images/logo.png" alt="Maghreb Institute Logo">
+      <span>Maghreb Institute</span>
+    </div>
     <div class="nav-bottom">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="programs.html">Programs</a></li>
         <!--<li><a href="#">Events</a></li>-->
         <li><a href="#">Resources</a></li>
@@ -24,18 +28,13 @@
   <section id="subhero">
     <div class="subhero-container">
 
-      <img src="images/logo.png" alt="Maghreb Institute Logo" class="center-logo">
+      <img src="images/logo01.png" alt="Maghreb Institute Logo" class="center-logo">
 
 
       <h1>Our Mission & Goals</h1>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem nesciunt possimus et mollitia velit consequuntur,
-        quidem ab ipsum obcaecati consectetur, saepe necessitatibus dignissimos est tempore. Minus, saepe. Quo, fuga!
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatem nesciunt possimus et mollitia velit consequuntur,
-        quidem ab ipsum obcaecati consectetur, saepe necessitatibus dignissimos est tempore. Minus, saepe. Quo, fuga!
-
+        Maghreb Institute is an education-centered organization dedicated to nurturing, educating, and empowering the servants of Allah. Rooted firmly in the Qur’an and Sunnah, our mission is to convey the authentic teachings of Islam with clarity, depth, and relevance. We strive to cultivate a safe, welcoming, and enriching environment where individuals and families can deepen their knowledge, strengthen their relationship with Allah, and flourish in the practical application of Islam’s most foundational principles. Through meaningful education, spiritual development, and character formation, Maghreb Institute seeks to help build confident, grounded, and principled Muslims who embody their faith in every aspect of life.
 
       </p>
 
@@ -51,42 +50,67 @@
 
       <section class="collage">
         <div>
-          <img src="images/aqeedah.jpg" alt="Alt text for the image" />
+          <img src="images/ch.jpg" alt="Alt text for the image" />
         </div>
 
         <div>
-          <img src="images/fiqh.jpg" alt="Alt text for the image" />
+          <img src="images/img1.jpg" alt="Alt text for the image" />
         </div>
 
         <div>
-          <img src="images/children.jpg" alt="Alt text for the image" />
-        </div>
-
-        <div aria-hidden="true"></div>
-
-        <div>
-          <img src="images/quran.jpg" alt="Alt text for the image" />
+          <img src="images/img2.jpg" alt="Alt text for the image" />
         </div>
 
         <div aria-hidden="true"></div>
 
         <div>
-          <img src="images/aqeedah.jpg" alt="Alt text for the image" />
+          <img src="images/img3.jpg" alt="Alt text for the image" />
+        </div>
+
+        <div aria-hidden="true"></div>
+
+        <div>
+          <img src="images/img4.jpg" alt="Alt text for the image" />
         </div>
 
         <div aria-hidden="true"></div>
         <div aria-hidden="true"></div>
 
         <div>
-          <img src="images/aqeedah.jpg" alt="Alt text for the image" />
+          <img src="images/img6.jpg" alt="Alt text for the image" />
         </div>
 
         <div>
-          <img src="images/aqeedah.jpg" alt="Alt text for the image" />
+          <img src="images/img05.jpg" alt="Alt text for the image" />
         </div>
 
         <div>
-          <img src="images/aqeedah.jpg" alt="Alt text for the image" />
+          <img src="images/img5.jpg" alt="Alt text for the image" />
+        </div>
+
+        
+        <div>
+          <img src="images/img06.jpg" alt="Alt text for the image" />
+        </div>
+
+        <div>
+          <img src="images/img07.jpg" alt="Alt text for the image" />
+        </div>
+        
+        <div>
+          <img src="images/img09.jpg" alt="Alt text for the image" />
+        </div>
+                
+        <div>
+          <img src="images/pic10.jpg" alt="Alt text for the image" />
+        </div>
+                     
+        <div>
+          <img src="images/img11.jpg" alt="Alt text for the image" />
+        </div>
+        
+        <div>
+          <img src="images/img12.jpg" alt="Alt text for the image" />
         </div>
       </section>
 
@@ -137,5 +161,14 @@
     </div>
   </footer>
 
+  <!-- Lightbox overlay for collage -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+  </div>
+
+  <script src="collage.js"></script>
 </body>
 </html>
